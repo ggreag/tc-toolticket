@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecentro Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="client-id">MAC Deco</label>
+                <input type="text" id="client-id" class="client-input" maxlength="10" placeholder="MAC">
+            </div>
+            
+            <div class="form-group">
+                <label for="caller-name">Nombre de quien se comunica:</label>
+                <input type="text" id="caller-name" class="caller-input" maxlength="20" placeholder="Nombre/Parentezco">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Tipo de ticket</label>
+            <div class="checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" name="ticket-category" id="ticket-checkbox" class="category-checkbox">
+                    <span class="checkmark"></span>
+                   RT SI
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="ticket-category" id="socket-checkbox" class="category-checkbox">
+                    <span class="checkmark"></span>
+                    RT NO
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="ticket-category" id="more-checkbox" class="category-checkbox">
+                    <span class="checkmark"></span>
+                    Sugerencia
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="ticket-category" id="serious-checkbox" class="category-checkbox">
+                    <span class="checkmark"></span>
+                   Solicitud tecnica
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="ticket-category" id="ra-si-checkbox" class="category-checkbox">
+                    <span class="checkmark"></span>
+                    Reclamo Administrativo
+                </label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="ticket-type">Tipo de ticket:</label>
+            <select id="ticket-type" class="ticket-selector" disabled>
+                <option value="">-- Selecciona un tipo de ticket primero --</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="ticket-content">Contenido del ticket:</label>
+            <textarea id="ticket-content" class="ticket-template" rows="10"></textarea>
+        </div>
+        
+        <div class="button-group">
+            <button id="copy-btn" class="btn">Copiar</button>
+            <button id="clear-btn" class="btn">Limpiar</button>
+        </div>
+        
+        <div id="status-message" class="status-message"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
